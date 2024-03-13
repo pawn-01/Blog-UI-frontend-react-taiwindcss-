@@ -50,7 +50,7 @@ const Editpage = () => {
       data.set('content',content)
       console.log(files);
         e.preventDefault();
-        const res = await axios.put(`${import.meta.env.VITE__URL}/edit/${id}`,data,{withCredentials:true})
+        const res = await axios.put(`${import.meta.env.VITE__URL}/edit/${id}`,data,{headers:{"token":localStorage.getItem("token")}},{withCredentials:true})
   
         if(res.data.a==1){
             setredirect(true);

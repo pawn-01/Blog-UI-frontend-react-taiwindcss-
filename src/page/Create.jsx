@@ -26,7 +26,7 @@ const Create = () => {
       data.set('content',content)
       console.log(files);
         e.preventDefault();
-        const res = await axios.post(`${import.meta.env.VITE__URL}/create`,data,{withCredentials:true})
+        const res = await axios.post(`${import.meta.env.VITE__URL}/create`,data,{headers:{"token":localStorage.getItem("token")}},{withCredentials:true})
         console.log(res.statusText);
         if(res.data.a==1){
             setredirect(true);

@@ -24,6 +24,7 @@ const Login = () => {
          setuser(res.data);
          setredirect(true);
          alert("Login Sucessfully")
+         localStorage.setItem("token",res.data.token);
     }
     if(res.data.a==0){
        alert("Credentials not matched")

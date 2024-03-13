@@ -15,7 +15,7 @@ const Home = () => {
  
   useEffect(() => {
      async function backend(){
-      const res = await axios.post(`${import.meta.env.VITE__URL}/profile`, {},{withCredentials:true});
+      const res = await axios.post(`${import.meta.env.VITE__URL}/profile`, {},{headers:{"token":localStorage.getItem("token")}},{withCredentials:true});
       console.log("home " + typeof res.data.a);
       if(res.data.a==1){
          console.log(res.data.decode);

@@ -36,7 +36,7 @@ const Postviewpage = () => {
     }
     
     async function deletepost(){
-       const res = await axios.delete(`${import.meta.env.VITE__URL}/delete/${id}`,{withCredentials:true});
+       const res = await axios.delete(`${import.meta.env.VITE__URL}/delete/${id}`,{headers:{"token":localStorage.getItem("token")}},{withCredentials:true});
        console.log(res);
        if(res.data.a==1){
             navi(`/user/${user.id}`);
