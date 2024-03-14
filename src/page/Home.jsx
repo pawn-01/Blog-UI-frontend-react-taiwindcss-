@@ -32,7 +32,7 @@ const Home = () => {
      const res = await axios.post(`${import.meta.env.VITE__URL}/logout`,{},{withCredentials:true});
      if(res.data.a==1){
         setusername(null);
-       // return <Navigate to='/login' />
+        localStorage.removeItem('token');
        navi('/login');
      }
   }
