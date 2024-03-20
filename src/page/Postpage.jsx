@@ -46,7 +46,7 @@ const Postpage = () => {
     <>
       <Side />
       <div class="divide-y rounded-lg border">
-        <div class="grid w-full grid-cols-3 items-stretch justify-center divide-x phone:grid-cols-1 tab:grid-cols-2">
+        <div class="grid w-full grid-cols-3 items-stretch justify-center divide-x tab:grid-cols-2 phone:grid-cols-1 ">
         {posts.length>0 && posts.map(post=>(
           <Posts {...post}/>
             ))}

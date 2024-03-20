@@ -10,7 +10,7 @@ export default {
         
   
         'phone': {'max': '600px'},
-        'tab':{'max':'950px'}
+        'tab':{'max':'950px','min':'600px'}
         // => @media (max-width: 639px) { ... }
       }
     },
