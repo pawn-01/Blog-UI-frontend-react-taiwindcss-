@@ -45,11 +45,11 @@ const Postviewpage = () => {
 
   return (
     <>
-       <h1 className='text-center text-[3rem] font-bold max-md:text-[2rem] mx-[0]'>{postinfo.title}</h1>
+       <h1 className='text-center text-[3rem] font-bold max-md:text-[2rem] mx-[0] break-all'>{postinfo.title}</h1>
        <time className='text-center block text-[.8rem] text-[#aaa] '>{format(new Date(postinfo.createdAt), "MMM d, yyyy HH:mm")}</time>
-       <div className='text-center mb-[20px] text-[.7rem] font-bold'>by @{postinfo.author.username}</div>
+       <div className='text-center mb-[20px] text-[.7rem] font-bold break-all'>by @{postinfo.author.username}</div>
        {user && user.id==postinfo.author._id && (
-        <div className='text-center mb-[20px]'>
+        <div className='text-center mb-[20px] '>
            <Link to={`/edit/${postinfo._id}`}
              className='bg-[#333] text-[#fff] py-[15px] px-[20px] inline-flex rounded-[5px] gap:5px'>
            <svg className='text-center h-[20px]' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -68,7 +68,7 @@ const Postviewpage = () => {
       <div className='max-h-[400px] w-[full] overflow-hidden flex mb-[20px] justify-center items-center'>
           <img className=" object-cover object-center" src={`${import.meta.env.VITE__URL}/${postinfo.cover}`} alt='image'/>
       </div>
-      <div className='leading-normal shadow-lg shadow-[black] p-[1rem] mt-[2rem]' dangerouslySetInnerHTML={{__html:postinfo.content}}/>
+      <div className='leading-normal shadow-lg shadow-[black] p-[1rem] mt-[2rem]  phone:overflow-x-clip tab:overflow-x-clip' dangerouslySetInnerHTML={{__html:postinfo.content}}/>
     </>
   )
 }

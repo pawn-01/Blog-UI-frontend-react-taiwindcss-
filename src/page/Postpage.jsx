@@ -46,7 +46,7 @@ const Postpage = () => {
     <>
       <Side />
       <div class="divide-y rounded-lg border">
-        <div class="grid w-full grid-cols-3 items-stretch justify-center divide-x md:grid-cols-3">
+        <div class="grid w-full grid-cols-3 items-stretch justify-center divide-x phone:grid-cols-1 tab:grid-cols-2">
         {posts.length>0 && posts.map(post=>(
           <Posts {...post}/>
             ))}
@@ -55,14 +55,14 @@ const Postpage = () => {
         
        <div className='flex justify-center items-center'> Made with ❤️ by Pawan</div>
 
-        <div className='flex justify-center items-center border-t gap-4 py-6 w-full'>
-        <a class="text-xs hover:underline underline-offset-4" href="#">
+        <div className='flex justify-center items-center border-t gap-4 py-6 w-full phone:gap-3 phone:px-[5px] phone:py-1'>
+        <a class="text-xs hover:underline underline-offset-4 phone:w-[45%] phone:text-[10px]" href="#">
         Copyright © 2024. All rights reserved.
       </a>
-        <a class="text-xs hover:underline underline-offset-4" href="#">
+        <a class="text-xs hover:underline underline-offset-4 phone:w-[40%] phone:text-[10px] phone:text-center" href="#">
         Terms of Service
       </a>
-      <a class="text-xs hover:underline underline-offset-4" href="#">
+      <a class="text-xs hover:underline underline-offset-4 phone:w-[25%] phone:text-[10px] phone:text-center" href="#">
         Privacy
       </a>
         </div>

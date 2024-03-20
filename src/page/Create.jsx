@@ -41,7 +41,7 @@ const Create = () => {
   return (
        <>
        <div className='flex justify-center items-center'>
-       <form action='' className='flex flex-col justify-center items-center Screen w-[60%]'>
+       <form action='' className='flex flex-col justify-center items-center Screen w-[60%] phone:w-[90%]'>
           <input type='text' value={title} placeholder='title max words should be less than 100' maxLength={100}  onChange={(e)=>{settitle(e.target.value)}}  className='input' />
           <input type='text' placeholder='summary max words should be less than 200' value={summary} maxLength={200} onChange={(e)=>{setsummary(e.target.value)}}  className='input'/>
           <input type='file' className='input' onChange={(e)=>{setfiles(e.target.files)}}/>

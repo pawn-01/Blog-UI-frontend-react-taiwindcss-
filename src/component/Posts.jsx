@@ -13,7 +13,7 @@ const Posts = ({_id,title, summary,cover, createdAt , author}) => {
          </Link>
        </div>
          
-         <div>
+         <div className=''>
             <h2 className='font-bold text-[2rem]'>
               <Link to={`/posts/${_id}`}>
               {title}

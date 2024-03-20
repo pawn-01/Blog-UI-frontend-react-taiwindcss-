@@ -17,12 +17,12 @@ const Side = () => {
 
   return (
   <>
-  <div class="flex flex-col h-[85vh]">
+  <div class="flex flex-col h-[85vh] phone:h-[60vh]">
     <main class="flex-1">
     <section class="w-full py-12 md:py-24 lg:py-32">
       <div class="container grid items-center justify-center gap-4 px-4 md:px-6">
         <div class="space-y-3 text-center">
-          <h1 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl/none">Exploring the {'{ Dev'}
+          <h1 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl/none phone:w-[250px]">Exploring the {'{ Dev'}
           <Typewriter
             words={['loper', 'elopment', 'code']}
             loop={true}

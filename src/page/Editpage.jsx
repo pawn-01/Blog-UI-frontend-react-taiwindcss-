@@ -64,7 +64,7 @@ const Editpage = () => {
   return (
        <>
        <div className='flex justify-center items-center'>
-       <form action='' className='flex flex-col justify-center items-center Screen w-[60%]'>
+       <form action='' className='flex flex-col justify-center items-center Screen w-[60%] phone:w-[90%]'>
           <input type='text' value={title} placeholder='title'  maxLength={100} onChange={(e)=>{settitle(e.target.value)}}  className='input' />
           <input type='text' placeholder='summary' value={summary}  maxLength={200} onChange={(e)=>{setsummary(e.target.value)}}  className='input'/>
           <input type='file' className='input' onChange={(e)=>{setfiles(e.target.files)}}/>

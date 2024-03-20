@@ -10,6 +10,7 @@ import Create from './page/Create'
 import Postviewpage from './page/Postviewpage'
 import Editpage from './page/Editpage'
 import Allpostuser from './page/Allpostuser'
+import Notfound404page from './page/Notfound404page'
 
 
 const App = () => {
@@ -26,7 +27,7 @@ const App = () => {
                   <Route path='edit/:id' element={<Editpage />} />
                   <Route path='create' element={<Create/>}/>
                   <Route path='user/:id' element={<Allpostuser/>} />
-                  <Route path='*' element={<div className='flex justify-center items-center'>404 Not Found</div>} />
+                  <Route path='*' element={<Notfound404page/>} />
              </Route>
              
             </Routes>

@@ -45,7 +45,7 @@ const Allpostuser = () => {
 
   return (
     <div><div class="divide-y rounded-lg border">
-    <div class="grid w-full grid-cols-3 items-stretch justify-center divide-x md:grid-cols-3">
+    <div class="grid w-full grid-cols-3 items-stretch justify-center divide-x  phone:grid-cols-1">
     {posts.length>0 && posts.map(post=>(
       <Posts {...post}/>
         ))}
